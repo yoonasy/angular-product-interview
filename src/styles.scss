@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body, p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}

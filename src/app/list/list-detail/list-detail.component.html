@@ -1,0 +1,23 @@
+<div class="detail">
+  <div class="detail-back" (click)="onBack()">返回列表</div>
+
+  <div class="detail-wrap">
+    <h2>产品详情</h2>
+    <div>产品ID：{{ id }}</div>
+
+    <div class="zoom">
+      <div class="zoom-wrap" (mousemove)="onMove($event)">
+        <div class="zoom-glass" [style]="{ left: cur.x + 'px', top: cur.y + 'px' }"></div>
+        <img
+          class="zoom-preview"
+          #img
+          src="https://img.alicdn.com/imgextra/i1/6000000002097/O1CN01dMsx1d1RMTGQNuy7I_!!6000000002097-0-picassoopen.jpg_430x430q90.jpg"
+        />
+      </div>
+
+      <div class="zoom-big-wrap">
+        <img [style]="{ left: -preview.x + 'px', top: -preview.y + 'px' }" src="https://img.alicdn.com/imgextra/i1/6000000002097/O1CN01dMsx1d1RMTGQNuy7I_!!6000000002097-0-picassoopen.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

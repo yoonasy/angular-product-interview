@@ -1,0 +1,26 @@
+<div class="card" [class]="hidden ? 'hidden' : ''">
+  <section>
+    <a [routerLink]="['/list-detail', item.id]"><img [src]="item.img" alt="" /></a>
+  </section>
+
+  <div class="card-wrap">
+    <p class="productPrice" [class]="{ anim: enableAnim }">
+      <em class="txt" [title]="item.price"><b>¥</b>{{ item.price | toFixed:2 }}</em>
+    </p>
+
+    <p class="productTitle" [class]="{ anim: enableAnim }">
+      <a class="txt" [routerLink]="['/list-detail', item.id]">[{{ typeName(item.type) }}] {{ item.desc }}</a>
+    </p>
+
+    <p class="productShop">
+      <a class="productShop-name" href="https://chaoshi.tmall.com/" target="_blank">天猫超市</a>
+      <span class="productShop-type">{{ typeName(item.type) }}</span>
+    </p>
+
+    <p class="productStatus">
+      <span>月成交 <em>{{ item.volume }}+笔</em></span>
+      <span class="comment">评价 <a href="https://detail.tmall.com/item.htm?id=539062758214&amp;skuId=null&amp;areaId=511000&amp;cat_id=2&amp;is_b=1&amp;rn=633171671fc8b6785c699f49e46818df&amp;on_comment=1#J_TabBar" target="_blank">9.6万</a></span>
+      <span class="aliww"><a class="ww-inline ww-online" title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。"></a></span>
+    </p>
+  </div>
+</div>

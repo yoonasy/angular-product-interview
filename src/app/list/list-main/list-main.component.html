@@ -1,0 +1,6 @@
+<div class="list-wrap">
+  <div class="list">
+    <app-list-item *ngFor="let item of list" [item]="item" [enableAnim]="enableAnim"></app-list-item>
+    <app-list-item [hidden]="true" *ngFor="let i of [1, 2, 3]"></app-list-item>
+  </div>
+</div>
