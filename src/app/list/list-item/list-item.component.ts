@@ -32,7 +32,7 @@ export const slideOutAnimation = animation([
     trigger('visibilityChange', [
       // 重新更新插入进来
       transition(':enter', [
-        group([
+        group([ // group并行执行以下样式（同时执行）
           query('.anim', useAnimation(slideInAnimation, {
             params: { from: '20%', timings: '0.6s ease-in' }
           }), { optional: true }),
