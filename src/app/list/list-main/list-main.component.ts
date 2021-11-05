@@ -62,6 +62,7 @@ export class ListMainComponent implements OnInit {
     // this.list = []
     this.enableAnim = false
     this.subList.forEach(e => e.unsubscribe())
+    this.subList = []
 
     let initSub = this.getData(type, size)
       .subscribe((response: responseData) => {

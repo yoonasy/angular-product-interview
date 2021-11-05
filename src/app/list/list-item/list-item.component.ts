@@ -55,7 +55,9 @@ export class ListItemComponent implements OnInit {
 
   @HostBinding('@visibilityChange')
 
-  _item: Product = {
+  @Input() enableAnim = false;
+  @Input() hidden: boolean = false;
+  @Input() item: Product = {
     id: '',
     name: '',
     type: 0,
@@ -63,10 +65,15 @@ export class ListItemComponent implements OnInit {
     img: '',
     desc: '',
     volume: 0
-  }
-  @Input() enableAnim = false;
-  @Input() hidden: boolean = false;
-  // @Input() item: Product = {
+  };
+  // @Input()
+  // get item(): Product {
+  //   return this._item
+  // }
+  // set item(val: any) {
+  //   this._item = val
+  // }
+  // _item: Product = {
   //   id: '',
   //   name: '',
   //   type: 0,
@@ -74,15 +81,7 @@ export class ListItemComponent implements OnInit {
   //   img: '',
   //   desc: '',
   //   volume: 0
-  // };
-  @Input()
-  get item(): Product {
-    return this._item
-  }
-
-  set item(val: any) {
-    this._item = val
-  }
+  // }
 
   ngOnInit(): void {
   }
