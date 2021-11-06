@@ -7,6 +7,8 @@ cd angular-product-interview/
 npm i && npm run start
 ```
 
+[题目2 react版](https://github.com/yoonasy/product-react-ts)
+
 ## Product（angular-product） 题目1：【交付内容如下】
 产品列表（属性包含产品ID，产品名称，分类名称，产品价格，产品图片等），数据自己模拟，单页数量最小300，`每隔 5 秒自动随机更新（增加，删除，属性变化都可以）不小于50条`产品（名称，价格文字类的属性`更新需要有明确的颜色变化`提示）
 - 产品列表按产品分类来显示 ✔️
