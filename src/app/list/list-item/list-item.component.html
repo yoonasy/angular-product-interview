@@ -1,4 +1,4 @@
-<div class="card" [class]="hidden ? 'hidden' : ''">
+<div class="card" [class.hidden]="hidden">
   <section>
     <a [routerLink]="['/list-detail', item.id]"><img [src]="item.img" alt="" /></a>
   </section>
